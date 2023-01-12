@@ -1,0 +1,68 @@
+name: Module 107
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Task Testing
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Checkout repo with tests
+        uses: actions/checkout@master
+        with:
+          repository: linerotechab/kotlin-hw-results
+          token: ${{ secrets.my_pat }}
+          path: ./kotlin-hw-results
+
+      - name: Move helper files
+        run: cp -r ./kotlin-hw-results/src/test/kotlin/helper ./src/test/kotlin
+
+      - name: Move test files
+        run: |
+          cp -r ./kotlin-hw-results/src/test/kotlin/lms_133 ./src/test/kotlin
+          gradle --version
+
+      - name: Test LMS 133
+        run: gradle test --tests "lms_133.*"
+
+      - name: Retrieve Badge Title
+        if: always()
+        run: |
+          if [ -f "$PWD/badge.txt" ];
+          then
+          
+          echo "badgeTitle=$(head -n 1 $PWD/badge.txt)" >> $GITHUB_ENV
+          else
+          
+          echo "badgeTitle=0" >> $GITHUB_ENV
+          fi
+
+      - name: Retrieve Badge Color
+        if: always()
+        run: |
+          if [ -f "$PWD/badge.txt" ];
+          then
+
+          echo "badgeColor=$(tail -n 1 $PWD/badge.txt )" >> $GITHUB_ENV
+          else
+          
+          echo "badgeColor=D53644" >> $GITHUB_ENV
+          fi
+
+      - name: Create Badge
+        if: always()
+        uses: RubbaBoy/BYOB@v1.3.0
+        with:
+          NAME: module_133
+          LABEL: 'Module 107'
+          ICON: 'github'
+          STATUS: ${{ env.badgeTitle }}% Completed
+          COLOR: ${{ env.badgeColor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
