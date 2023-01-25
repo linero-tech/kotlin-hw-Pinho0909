@@ -1,5 +1,3 @@
-
-
 package lms_126
 
 fun task8(): String {
