@@ -1,7 +1,8 @@
 package lms_126
 
 fun task8(): String {
-    return"""
+
+    return """
         INPUT X
             If X is multiple of 3 THEN 
                 If X is multiple of 5 THEN 
