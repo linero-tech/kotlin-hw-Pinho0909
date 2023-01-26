@@ -3,15 +3,12 @@ package lms_126
 fun task5(): String {
 
     return """
-        INPUT X = 1 to 8
-            WHEN X =
-                    1-> OUTPUT "Monday"       
-                    2-> OUTPUT "Tuesday"
-                    3-> OUTPUT "Wednesday"
-                    4-> OUTPUT "Thursday"       
-                    5-> OUTPUT "Friday"
-                    6-> OUTPUT "Saturday"
-                    7-> OUTPUT "Sunday"
-                    8-> OUTPUT "Next Week"
+        INPUT x = 1 to 8
+        IF x = 8 THEN
+            OUTPUT "Day not found"
+        ELSE
+            x = x - 1
+            day = ARRAY ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+            OUTPUT "day"
     """.trimIndent()
 }
