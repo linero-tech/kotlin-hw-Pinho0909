@@ -3,14 +3,17 @@ package lms_126
 fun task4(): String {
 
     return """
-        INPUT X
-        INPUT Y
-            IF X > Y THEN
-        OUTPUT "X"
-            ELSE
-            IF Y > X THEN
-        OUTPUT "Y"
-            ElSE
-        OUTPUT "X" "=" "Y"
+        START
+        INPUT x
+        INPUT y
+        IF x = y THEN
+            OUTPUT "x = y"
+            END
+        ELSE IF x > y THEN
+            OUTPUT "x"
+            END
+        ELSE 
+            OUTPUT "y"
+            END
     """.trimIndent()
 }

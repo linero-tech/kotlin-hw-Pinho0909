@@ -3,8 +3,10 @@ package lms_126
 fun task7(): String {
 
     return """
+        START
         FOR number is 1 to 100
             IF number is even THEN
-        OUTPUT number
+            OUTPUT number
+            END
     """.trimIndent()
 }
