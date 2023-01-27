@@ -20,7 +20,7 @@ fun task9(): String {
                     ELSE
                     OUTPUT "Do you want Receipt 
                     INPUT x
-                        IF x = yes
+                        IF x = yes THEN
                             OUTPUT "Take your Amount, Card and Receipt"    
                             END
                         ELSE
