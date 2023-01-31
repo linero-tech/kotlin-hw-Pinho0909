@@ -25,5 +25,5 @@ fun task9(): String {
             OUTPUT "Password Incorrect and Take your Card"         
         ELSE
         OUTPUT "It is not Acceptable Card and Take your Card"
-    """.trimIndent()
+    """
 }

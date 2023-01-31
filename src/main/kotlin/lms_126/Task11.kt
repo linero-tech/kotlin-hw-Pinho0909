@@ -4,17 +4,14 @@ fun task11(): String {
 
     return """
          INPUT temperature (limit with 3 characters)
-         READ temperature characters
             IF third characters = C THEN
-            READ temperature characters
-            First and Second characters convert to integral number = c
+            First and Second characters convert to = c
                 f = 1.8 * c + 32
                 OUTPUT f
             ELSE
-            READ temperature characters
-            First and Second characters convert to integral number = f
+            First and Second characters convert to = f
             c = ( f - 32 ) * 0.5556
             OUTPUT c
-    """.trimIndent()
+    """
 
 }

@@ -6,13 +6,13 @@ fun task8(): String {
         INPUT x
             If x is multiple of 3 THEN
                 If x is multiple of 5 THEN 
-                    OUTPUT "FooBar"             
+                    OUTPUT FooBar             
                 ELSE         
-                    OUTPUT "Foo"
+                    OUTPUT Foo
             ELSE
                 If x is not multiple of 5 THEN
-                    OUTPUT "Qix"
+                    OUTPUT Qix
                 ELSE
-                    OUTPUT "Bar"
-    """.trimIndent()
+                    OUTPUT Bar
+    """
 }
