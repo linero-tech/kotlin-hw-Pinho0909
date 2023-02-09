@@ -6,13 +6,6 @@ import java.math.RoundingMode
 import java.math.BigDecimal
 import java.text.DecimalFormat
 
-fun main (){
-    val radius = 2.0
-    println ("Assume that")
-    println("¤ Radius is $radius")
-    println("Then")
-    println("¤ result is " +task3(radius))
-}
 
 fun task3(radius: Double): Double {
 
@@ -38,5 +31,11 @@ fun task3(radius: Double): Double {
 
     val result = String.format("%.2f",perimeter)
 */
-
+}
+fun main (){
+    val radius = 2.0
+    println ("Assume that")
+    println("¤ Radius is $radius")
+    println("Then")
+    println("¤ result is " +task3(radius))
 }

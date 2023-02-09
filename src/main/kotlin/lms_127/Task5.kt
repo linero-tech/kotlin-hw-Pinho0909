@@ -1,8 +1,5 @@
 package lms_127
 
-fun main(){
-   task5(1,2)
-}
 fun task5(valueForA: Int, valueForB: Int): Pair<Int, Int> {
 
     var a = valueForA
@@ -35,4 +32,7 @@ Option 2
         println("¤ b is $b")
     return Pair(a, b)
     */
+}
+fun main(){
+    task5(1,2)
 }
