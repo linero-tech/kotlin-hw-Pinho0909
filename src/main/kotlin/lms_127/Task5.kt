@@ -1,12 +1,38 @@
 package lms_127
 
+fun main(){
+   task5(1,2)
+}
 fun task5(valueForA: Int, valueForB: Int): Pair<Int, Int> {
-    // Do not change or delete these variables
+
     var a = valueForA
     var b = valueForB
+        println("Assume that")
+        println("¤ a is $a ")
+        println("¤ b is $b")
 
-    TODO("Your solutions goes in here.")
-
-    // Do not erase or change this statement
+    a -= b
+    b += a
+    a = b - a
+        println("Then after the swap")
+        println("¤ a is $a ")
+        println("¤ b is $b")
     return Pair(a, b)
+
+/*
+Option 2
+    var a = valueForA
+    var b = valueForB
+        println("Assume that")
+        println("¤ a is $a ")
+        println("¤ b is $b")
+
+    val temporary = a
+    a = b
+    b = temporary
+        println("Then after the swap")
+        println("¤ a is $a ")
+        println("¤ b is $b")
+    return Pair(a, b)
+    */
 }
