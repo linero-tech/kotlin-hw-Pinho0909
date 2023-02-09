@@ -24,9 +24,7 @@ Option 2
         println("¤ a is $a ")
         println("¤ b is $b")
 
-    val temporary = a
-    a = b
-    b = temporary
+    val temporary = a     = b     = temporary
         println("Then after the swap")
         println("¤ a is $a ")
         println("¤ b is $b")
