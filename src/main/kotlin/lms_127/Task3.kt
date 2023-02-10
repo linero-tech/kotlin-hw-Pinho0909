@@ -1,18 +1,18 @@
 package lms_127
 
 // What this is Import?
-//import kotlin.math.roundToInt
-//import java.math.RoundingMode
-//import java.math.BigDecimal
-//import java.text.DecimalFormat
+import kotlin.math.roundToInt
+import java.math.RoundingMode
+import java.math.BigDecimal
+import java.text.DecimalFormat
 
 
 fun task3(radius: Double): Double {
 
     val pi = 3.1416
     val result = radius * 2 * pi
-    //return (result * 100.0).roundToInt() / 100.0
-    return result
+    return (result * 100.0).roundToInt() / 100.0
+
 }
 fun main (){
     val radius = 2.0
@@ -29,12 +29,11 @@ fun main (){
 
 ///Option 3///
     Is not working?
-
     val df = DecimalFormat("#.##")
     df.roundingMode = RoundingMode.UP
-    val result = df.format(perimeter)
+    return df.format(result)
 
 ///Option 4///
     Is not working?
-    val result = String.format("%.2f",perimeter)
+    return String.format("%.2f",result).toDouble
 */
