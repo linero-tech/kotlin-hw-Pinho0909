@@ -10,5 +10,5 @@ fun main(){
     println("Assume that")
     println("¤ sentence is $sentence")
     println("Then")
-    println("¤ result is " +task7("I love GBG"))
+    println("¤ result is " +task7(sentence))
 }

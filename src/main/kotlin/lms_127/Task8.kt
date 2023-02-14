@@ -12,5 +12,5 @@ fun main (){
     println("¤ sentence is $sentence")
     println("¤ character is $character")
     println("Then")
-    println("¤ result is " +task8(sentence, character ))
+    println("¤ result is " +task8(sentence, character))
 }
