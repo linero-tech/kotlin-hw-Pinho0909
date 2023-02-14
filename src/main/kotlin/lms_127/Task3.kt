@@ -8,11 +8,9 @@ import kotlin.math.roundToInt
 
 
 fun task3(radius: Double): Double {
-
     val pi = 3.1416
     val result = radius * 2 * pi
     return (result * 100.0).roundToInt() / 100.0
-
 }
 fun main (){
     val radius = 2.0
