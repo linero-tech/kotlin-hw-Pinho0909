@@ -8,7 +8,7 @@ fun task5(valueForA: Int, valueForB: Int): Pair<Int, Int> {
     a -= b
     b += a
     a = b - a
-        println("Then after the swap")
+        println("after the swap")
         println("¤ a is $a ")
         println("¤ b is $b")
     return Pair(a, b)
