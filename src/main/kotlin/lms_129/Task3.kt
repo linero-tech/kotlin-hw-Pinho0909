@@ -1,9 +1,9 @@
 package lms_129
 
 fun task3(number: Int): Int {
-    var result = number
-    //Opcion 2 for (i in 1 until  result)
-        for (i in result-1 downTo 1) {
+    var result = 1
+    for (i in number downTo 1){
+    //Opcion 2   for (i in 1..number) {
             result*= i
         }
     return result
