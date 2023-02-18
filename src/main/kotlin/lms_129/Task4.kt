@@ -1,8 +1,8 @@
 package lms_129
 
-fun task4(a:Int,b:Int): Int {
+fun task4(): Int {
     var result = 0
-    for (i in a..b) {
+    for (i in 1..1000) {
         if (i % 9 == 0) {
             result += i
         }
@@ -10,9 +10,5 @@ fun task4(a:Int,b:Int): Int {
     return result
 }
 fun main (){
-    println("First Number=")
-    val a = readln().toInt()
-    println("Second Number=")
-    val b = readln().toInt()
-    println (task4(a,b))
+    println(task4())
 }
