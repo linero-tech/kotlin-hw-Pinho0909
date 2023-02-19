@@ -11,7 +11,7 @@ fun task3(number: Int): Int {
 fun main (){
     val number = 5
     println("Assume that")
-    println("¤ number a is $number ")
+    println("¤ number is $number")
     println("Then")
     println("¤ result is " + task3(number))
 }

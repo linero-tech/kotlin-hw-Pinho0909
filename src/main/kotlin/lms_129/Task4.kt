@@ -10,5 +10,6 @@ fun task4(): Int {
     return result
 }
 fun main (){
+
     println(task4())
 }

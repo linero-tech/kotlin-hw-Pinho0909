@@ -15,7 +15,7 @@ fun task2(number: Int): Boolean {
 fun main (){
     val number = 5
     println("Assume that")
-    println("¤ number a is $number ")
+    println("¤ number is $number")
     println("Then")
     println("¤ result is " + task2(number))
 

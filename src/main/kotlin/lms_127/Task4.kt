@@ -11,5 +11,5 @@ fun main (){
     println("¤ base is $b")
     println("¤ height is $h")
     println("Then")
-    println("¤ result is " +task4(b, h))
+    println("¤ result is " +task4(b,h))
 }

@@ -12,10 +12,11 @@ fun task1(a: Int, b: Int): Int {
         return result
 }
 fun main (){
+
     val a = 3
     val b = 3
     println("Assume that")
-    println("¤ a is $a ")
+    println("¤ a is $a")
     println("¤ b is $b")
     println("Then")
     println("¤ result is " + task1(a,b))

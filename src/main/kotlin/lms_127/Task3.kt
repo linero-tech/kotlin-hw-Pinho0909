@@ -26,12 +26,12 @@ fun main (){
     return BigDecimal(result).setScale(2, RoundingMode.UP)
 
 ///Option 3///
-    Is not working?
+   Is working, but we need to change task3: String
     val df = DecimalFormat("#.##")
     df.roundingMode = RoundingMode.UP
     return df.format(result)
 
 ///Option 4///
-    Is not working?
+   Is working, but we need to change task3: String
     return String.format("%.2f",result).toDouble
 */
