@@ -9,7 +9,8 @@ fun task4(): Int {
     }
     return result
 }
-fun main (){
 
+fun main() {
+    
     println(task4())
 }

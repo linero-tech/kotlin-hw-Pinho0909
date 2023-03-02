@@ -1,7 +1,7 @@
 package lms_129
 
 fun task2(number: Int): Boolean {
-
+    
     if (number < 2) {
         return false
     }
@@ -12,11 +12,12 @@ fun task2(number: Int): Boolean {
     }
     return true
 }
-fun main (){
+
+fun main() {
     val number = 5
     println("Assume that")
     println("¤ number is $number")
     println("Then")
     println("¤ result is " + task2(number))
-
+    
 }

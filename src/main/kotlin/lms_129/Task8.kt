@@ -8,11 +8,11 @@ fun task8(number: Int): Int {
         result += rest
         num /= 10
     }
-return  result
+    return result
 }
 
-fun main (){
-    val number= 123
+fun main() {
+    val number = 123
     println("Assume that")
     println("¤ number is $number")
     println("Then")
