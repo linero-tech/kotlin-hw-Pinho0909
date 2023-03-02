@@ -1,27 +1,15 @@
 package lms_129
 
 fun task10(password: String): Boolean {
-    /*
-First Code
-    1. Length Min = 6 characters and Max = 10 characters.
-        val length = password.length in 6..10
-
-    2. At least 1 letter between [a-z] and At least 1 letter between [A-Z]
-        val lower = password.firstOrNull { it.isLowerCase() } != null
     
-    3. At least 1 letter between [A-Z]
-        val upper = password.firstOrNull { it.isUpperCase() } != null
-    
-    4. Number between [0-9].
-        val digit = password.firstOrNull { it.isDigit() } != null
-    
-    5. Number between [$#@].
-        val character =
-            password.contains('$') || password.contains('#') || password.contains('@')
-        
-        return length && lower && upper && digit && character
-        
-    ////Explain RegEx
+    return (password.length in 6..10) &&
+            (password.firstOrNull { it.isLowerCase() } != null) &&
+            (password.firstOrNull { it.isUpperCase() } != null) &&
+            (password.firstOrNull { it.isDigit() } != null) &&
+            (password.contains('$') || password.contains('#') || password.contains('@'))
+}
+/*
+////Code with RegEx
         
         [0]         Search one character
         [02]        Search character 0 and 2
@@ -40,43 +28,21 @@ First Code
             $1 / $2 / $3
         Link :  https://zetcode.com/kotlin/regularexpressions/
                 https://www.w3schools.com/jsref/jsref_obj_regexp.asp
-                
-    
-        Refactoring with Regex
-        
-        val condition = ("""[a-z][A-Z][0-9]([$]||[@]||[#])""").toRegex()
-        return (condition.containsMatchIn(password)) ||
-                (password.length in 6..10)
-    */
-    
-    ///Refactoring with firstOrNull
-    return (password.length in 6..10) &&
-            (password.firstOrNull { it.isLowerCase() } != null) &&
-            (password.firstOrNull { it.isUpperCase() } != null) &&
-            (password.firstOrNull { it.isDigit() } != null) &&
-            (password.contains('$') || password.contains('#') || password.contains('@'))
+*/
+
+///Refactoring with Regex
+fun regex(password: String): Boolean {
+    val condition = ("""[a-z][A-Z][0-9][$@#]""").toRegex()
+    return (condition.containsMatchIn(password)) &&
+            (password.length in 6..10)
 }
 
 fun main() {
-    
-    val lengthMin = "aA1$"
-    println("LengthMin " + task10(lengthMin)) // false
-    val lengthMax = "aA1$123456789"
-    println("LengthMax " + task10(lengthMax)) // false
-    val lowerCase = "AA1$12"
-    println("lowerCase " + task10(lowerCase)) // false
-    val upperCase = "aa1$12"
-    println("upperCase " + task10(upperCase)) // false
-    val digit = "aAA@aa"
-    println("digit " + task10(digit)) // false
-    val character = "aA11aa"
-    println("character " + task10(character)) // false
-    
     val password = "A1a@#gus"
     if (task10(password)) {
         println("A password is valid")
     } else {
         println("A password is not valid")
     }
-    
+    println("Regex is " + regex(password))
 }
