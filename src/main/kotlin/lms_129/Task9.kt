@@ -28,13 +28,14 @@ fun task9(temperature: String): String {
     }
     */
     val number = temperature.dropLast(1).toInt()
+
     val result = when (temperature.last().toString().uppercase()) {
         "C" -> {
-            ((1.8 * number + 32).roundToInt()).toString() + "F"
+            (((1.8 * number + 32) * 100.0).roundToInt() /100).toString()+"F"
         }
         
         "F" -> {
-            ((number - 32) * 0.5556).roundToInt().toString() + "C"
+            ((((number - 32) * 0.5556) * 100.0).roundToInt() /100).toString()+"C"
         }
         
         else -> "Temperature Invalid "
@@ -43,7 +44,7 @@ fun task9(temperature: String): String {
 }
 
 fun main() {
-    val temperature = "-30C" // Tests = -30C && 50f && -100c && 20a
+    val temperature = "-90F" // Tests = -30C && 50f && -100c && 20a
     println("Assume that")
     println("¤ temperature is $temperature")
     println("Then")
