@@ -1,8 +1,14 @@
 package lms_130
 
 fun task2(items: List<Int>): Int {
+    var result = 0
     
-    return items.size
+    for (index in items.indices) {
+        if (index % 2 == 0) {
+            result += items[index]
+        }
+    }
+    return result
 }
 
 fun main() {
