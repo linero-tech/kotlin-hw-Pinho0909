@@ -1,10 +1,11 @@
 package lms_127
 
-fun task1 () {
+fun task1() {
     println("Country: Portugal")
-    println("Capital: Lisbon" )
-    println("Currency: Euro" )
+    println("Capital: Lisbon")
+    println("Currency: Euro")
 }
-fun main(){
+
+fun main() {
     task1()
 }
