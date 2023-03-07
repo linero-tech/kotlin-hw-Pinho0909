@@ -5,7 +5,7 @@ fun task9(temperature: String): String {
     val number = temperature.substring(0,temperature.length-1).toDouble()
     val result = when (temperature.last().toString().uppercase()) {
         "C" -> {
-            ((number * 9 / 5 + 32) * 100.0).toInt().toString()+"F"
+            (number * 9 / 5 + 32).toInt().toString()+"F"
         }
         
         "F" -> {
@@ -18,7 +18,7 @@ fun task9(temperature: String): String {
 }
 
 fun main() {
-    val temperature = "-90F" // Tests = -30C && 50f && -100c && 20a
+    val temperature = "-90C" // Tests = -30C && 50f && -100c && 20a
     println("Assume that")
     println("¤ temperature is $temperature")
     println("Then")
