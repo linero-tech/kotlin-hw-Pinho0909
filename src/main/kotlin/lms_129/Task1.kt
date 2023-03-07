@@ -1,6 +1,16 @@
 package lms_129
 
 fun task1(a: Int, b: Int): Int {
+    /* Solution Class
+    var result = 0
+    for (number in a..b) {
+        if (a == b) {
+            break
+        }
+        result += number
+    }
+    */
+    
     var result = 0
     if (a >= b) {
         return 0
