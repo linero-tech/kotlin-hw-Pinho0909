@@ -2,8 +2,7 @@ package lms_130
 
 fun task8(items: List<Int>): List<Int> {
     
-    val  highestValue = items.toSet().sortedDescending().subList(0,3).reversed()
-    return highestValue
+    return items.toSet().sortedDescending().subList(0, 3).reversed()
 }
 
 fun main() {
