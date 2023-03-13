@@ -2,12 +2,12 @@ package lms_130
 
 fun task8(items: List<Int>): List<Int> {
     
-    val  highestValue = items.sortedDescending().subList(0, 3).reversed()
-    return highestValue.toSet().toList()
+    val  highestValue = items.toSet().sortedDescending().subList(0,3).reversed()
+    return highestValue
 }
 
 fun main() {
-    val myList = listOf(1, 1, 1, 1)
+    val myList = listOf(1, 2, 3, 4, 1, 2, 3, 4)
     println("¤ items is $myList")
     println("Then")
     println("¤ result is " + task8(myList))
