@@ -1,6 +1,5 @@
 package lms_130
 
-import kotlin.math.min
 
 fun task7(items: List<Int>): Int {
     
