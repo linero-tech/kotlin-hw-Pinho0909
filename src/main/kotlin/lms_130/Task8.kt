@@ -3,21 +3,20 @@ package lms_130
 fun task8(items: List<Int>): List<Int> {
     
     //Option 2
-    val result = items.distinct().sortedDescending().subList(0, 3).reversed()
-    println(result.toList())
+    val result = items.sortedDescending().subList(0, 3).reversed()
+    println(result)
     
     //My Solution
-    val highestList = items.toSet().sortedDescending()
-    val highestValues = mutableSetOf<Int>()
+    val highestList = items.sortedDescending().toMutableList()
     
-    for (index in 2 downTo   0) {
-        highestValues.add(highestList[index])
+    for (index in 3 until highestList.size) {
+        highestList.removeAt(index)
     }
-    return highestValues.toList()
+    return highestList.reversed()
 }
 
 fun main() {
-    val myList = listOf(1, 2, 3, 4, 1, 2, 3, 4)
+    val myList = listOf(60, 9, 7, 10)
     println("¤ items is $myList")
     println("Then")
     println("¤ result is " + task8(myList))
