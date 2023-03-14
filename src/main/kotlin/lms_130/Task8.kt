@@ -7,7 +7,7 @@ fun task8(items: List<Int>): List<Int> {
     println(result.toList())
     
     //My Solution
-    val highestList = items.sortedDescending()
+    val highestList = items.toSet().sortedDescending()
     val highestValues = mutableSetOf<Int>()
     
     for (index in 2 downTo   0) {
@@ -17,7 +17,7 @@ fun task8(items: List<Int>): List<Int> {
 }
 
 fun main() {
-    val myList = listOf(60, 9, 7, 10)
+    val myList = listOf(1, 2, 3, 4, 1, 2, 3, 4)
     println("¤ items is $myList")
     println("Then")
     println("¤ result is " + task8(myList))
